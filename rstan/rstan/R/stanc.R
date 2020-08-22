@@ -56,6 +56,7 @@ stanc <- function(file, model_code = '', model_name = "anon_model",
   if (r$status == SUCCESS_RC && verbose)
     cat("successful in parsing the Stan model '", model_name, "'.\n", sep = '')
   r$status = !as.logical(r$status)
+  return(r)
 }
 
 
